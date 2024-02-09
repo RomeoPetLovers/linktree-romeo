@@ -1,4 +1,4 @@
-import { GraphqlClient } from '@shopify/shopify-api/lib/clients/graphql/graphql_client';
+//import { GraphqlClient } from '@shopify/shopify-api/lib/clients/graphql/graphql_client';
 import Product from './Product/Product';
 import {
   Container,
@@ -8,9 +8,9 @@ import {
 } from './Products.styles';
 
 export default function Products() {
-  const session;
-  const client async = new GraphqlClient({ session });
-  const response = await client.query({ data: '{your_query}' });
+  //const session;
+  //const client async = new GraphqlClient({ session });
+  //const response = await client.query({ data: '{your_query}' });
 
   const productsInfo = {
     0: {
