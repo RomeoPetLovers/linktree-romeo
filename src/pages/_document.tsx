@@ -49,10 +49,10 @@ export default class MyDocument extends Document {
           />
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <link rel="icon" href="" />
+          <link rel="icon" href="favicon.svg" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="" />
-          <meta property="og:title" content="" />
+          <meta property="og:title" content="Romeo Pet Lovers" />
           <meta property="og:description" content="" />
           <meta property="og:image" content="" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,19 +68,19 @@ export default class MyDocument extends Document {
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
-          <meta name="apple-mobile-web-app-title" content="" />
+          <meta name="apple-mobile-web-app-title" content="Romeo Pet Lovers" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="msapplication-TileColor" content="#20aaff" />
           <meta name="msapplication-tap-highlight" content="no" />
           <meta name="theme-color" content="#fafafa" />
 
-          <link rel="apple-touch-icon" href="" />
-          <link rel="shortcut icon" href="" />
+          <link rel="apple-touch-icon" href="favicon.svg" />
+          <link rel="shortcut icon" href="favicon.svg" />
 
           <meta name="twitter:card" content="" />
           <meta name="twitter:url" content="" />
-          <meta name="twitter:title" content="" />
+          <meta name="twitter:title" content="Romeo Pet Lovers" />
           <meta name="twitter:description" content="" />
           <meta name="twitter:image" content="" />
           <meta name="twitter:creator" content="" />

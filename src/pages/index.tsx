@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title />
+        <title>Romeo Pet Lovers</title>
         <meta name="description" content="" />
       </Head>
       <header>
