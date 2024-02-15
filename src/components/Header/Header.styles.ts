@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Head = styled.div`
@@ -19,9 +20,16 @@ export const Logo = styled.div`
   user-select: none;
 `;
 
+export const LogoLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  user-select: none;
+  height: 100%;
+`;
+
 export const LogoImg = styled.img`
   width: auto;
-  height: auto;
+  height: 100%;
   max-height: 12vw;
   user-select: none;
 `;
