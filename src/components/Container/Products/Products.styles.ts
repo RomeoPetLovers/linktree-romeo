@@ -39,8 +39,8 @@ export const RightArrow = styled.button`
 `;
 
 export const Arrow = styled.img`
-  height: 100%;
-  width: 100%;
+  height: 7vw;
+  width: 7vw;
   user-select: none;
 `;
 export const ProductsContainer = styled.div`

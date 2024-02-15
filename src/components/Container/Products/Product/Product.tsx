@@ -11,10 +11,10 @@ import {
   Text
 } from './Product.styles';
 
-export default function Product({ data }) {
+export default function Product({ data, last }) {
   return (
     <Container id={data.id}>
-      <Content href={data.url}>
+      <Content href={data.url} style={{ marginRight: last ? '0' : '2.5vw' }}>
         <Discount>{data.discount}% OFF</Discount>
         <Image src={data.image} />
         <Text>

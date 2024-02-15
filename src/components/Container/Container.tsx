@@ -37,7 +37,7 @@ export default function Container() {
             <ConfiraCatImg src="saturno.svg" alt="" draggable="false" />
           </ConfiraCat>
         </Confira>
-        <Suporte href="https://api.whatsapp.com/send/?phone=5512992439806&text&type=phone_number&app_absent=0">
+        <Suporte href="https://wa.me/5512988779760">
           <SuporteConteudo>
             <SuporteTitulo>Suporte</SuporteTitulo>
             <SuporteTexto>

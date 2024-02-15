@@ -1,6 +1,7 @@
-//import { GraphqlClient } from '@shopify/shopify-api/lib/clients/graphql/graphql_client';
+// import { GraphqlClient } from '@shopify/shopify-api/lib/clients/graphql/graphql_client';
 import Product from './Product/Product';
 import {
+  Arrow,
   Container,
   LeftArrow,
   ProductsContainer,
@@ -8,78 +9,58 @@ import {
 } from './Products.styles';
 
 export default function Products() {
-  //const session;
-  //const client async = new GraphqlClient({ session });
-  //const response = await client.query({ data: '{your_query}' });
+  // const session;
+  // const client = new GraphqlClient({ session });
+  // const response = await client.query({ data: '{your_query}' });
 
   const productsInfo = {
     0: {
-      id: 'd1',
-      url: 'https://romeopetlovers.com.br/collections/tudo/products/guia-de-cintura-romeo-double-running-para-cachorro',
+      id: '1',
+      url: 'https://romeopetlovers.com.br/collections/alimentacao/products/fonte-eletrica-romeo-clean-fountain',
       image:
-        'https://romeopetlovers.com.br/cdn/shop/files/S8e564f8cf2d04175b00c785b805783e9b_3f2d35a5-4929-454f-9c89-d85898319db4_300x.webp?v=1702507044',
-      name: 'Guia de Cintura Romeo Double Running para Cachorro',
-      price: '199,90',
-      discount: '29',
-      discounted: '279,90',
-      payment1: '19,96',
-      payment2: '189,91'
+        'https://romeopetlovers.com.br/cdn/shop/files/Capa1_0c516dd8-bedc-4dbf-89e2-5f716d312c7d_800x.jpg?v=1691584372',
+      name: 'Fonte Elétrica Romeo Clean Fountain',
+      price: '367,00',
+      discount: '27',
+      discounted: '499,90',
+      payment1: '37,19',
+      payment2: '348,65'
     },
     1: {
-      id: 'd2',
-      url: 'https://romeopetlovers.com.br/collections/tudo/products/caminha-romeo-comfort-plus-para-gatos',
+      id: '2',
+      url: 'https://romeopetlovers.com.br/collections/coleiras/products/coleira-romeo-leather-traditional-para-cachorro',
       image:
-        'https://romeopetlovers.com.br/cdn/shop/files/Verde_4f1b1eb1-7a87-44bf-b31a-dddc4d54cd1e_400x.jpg?v=1698412410',
-      name: 'Caminha Romeo Comfort Plus para Gatos',
-      price: '219,90',
-      discount: '27',
-      discounted: '299,00',
-      payment1: '21,95',
-      payment2: '208,91'
+        'https://romeopetlovers.com.br/cdn/shop/files/CapaPrincipal_0e48efe0-cae1-499f-96d5-a9171f01f696_800x.jpg?v=1702480996',
+      name: 'Coleira Romeo Leather Traditional para Cachorro',
+      price: '137',
+      discount: '9',
+      discounted: '149,90',
+      payment1: '13,88',
+      payment2: '130,15'
     },
     2: {
-      id: 'd3',
-      url: '',
-      image: '',
-      name: 'd1',
-      price: '100',
-      discount: '',
-      discounted: '100',
-      payment1: '',
-      payment2: ''
+      id: '3',
+      url: 'https://romeopetlovers.com.br/collections/promocao-de-verao/products/garrafinha-de-passeio-4-em-1-romeo-happy-trip',
+      image:
+        'https://romeopetlovers.com.br/cdn/shop/products/Rosa300mleCaixadeRacao_1600x.jpg?v=1690386794',
+      name: 'Garrafinha de Passeio 4 em 1 Romeo Happy Trip',
+      price: '197,00',
+      discount: '44',
+      discounted: '349,90',
+      payment1: '19,96',
+      payment2: '187,15'
     },
     3: {
-      id: 'd4',
-      url: '',
-      image: '',
-      name: 'd1',
-      price: '100',
-      discount: '',
-      discounted: '100',
-      payment1: '',
-      payment2: ''
-    },
-    4: {
-      id: 'd5',
-      url: '',
-      image: '',
-      name: 'd1',
-      price: '100',
-      discount: '',
-      discounted: '100',
-      payment1: '',
-      payment2: ''
-    },
-    5: {
-      id: 'd6',
-      url: '',
-      image: '',
-      name: 'd1',
-      price: '100',
-      discount: '',
-      discounted: '100',
-      payment1: '',
-      payment2: ''
+      id: '4',
+      url: 'https://romeopetlovers.com.br/collections/promocao-de-verao/products/tapete-gelado-romeo-refreshing',
+      image:
+        'https://romeopetlovers.com.br/cdn/shop/files/VarianteAzul_webp_800x.jpg?v=1707848787',
+      name: 'Tapete Gelado Romeo Refreshing',
+      price: '97,00',
+      discount: '43',
+      discounted: '169,90',
+      payment1: '9,83',
+      payment2: '92,15'
     }
   };
 
@@ -87,7 +68,7 @@ export default function Products() {
     const products = document.getElementById('products');
 
     const elem = products.children[1];
-    console.log(Object.entries(productsInfo));
+    // console.log(Object.entries(productsInfo));
     if (elem != null) {
       const rect = elem.getBoundingClientRect();
       products.scrollLeft -= rect.width * 2;
@@ -108,15 +89,19 @@ export default function Products() {
   return (
     <Container>
       <LeftArrow type="button" onClick={() => scrollToLeft()}>
-        <img src="left.svg" alt="" draggable="false" />
+        <Arrow src="left.svg" alt="" draggable="false" />
       </LeftArrow>
       <ProductsContainer id="products">
         {Object.keys(productsInfo).map(n => (
-          <Product data={productsInfo[n]} />
+          <Product
+            key={n}
+            data={productsInfo[n]}
+            last={parseInt(n, 10) === Object.keys(productsInfo).length - 1}
+          />
         ))}
       </ProductsContainer>
       <RightArrow type="button" onClick={() => scrollToRight()}>
-        <img src="right.svg" alt="" draggable="false" />
+        <Arrow src="right.svg" alt="" draggable="false" />
       </RightArrow>
     </Container>
   );
